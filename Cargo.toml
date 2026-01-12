@@ -12,6 +12,7 @@ keywords = ["tree", "print", "fmt", "display"]
 categories = ["command-line-interface"]
 
 [dependencies]
+sicht = { path = "../sicht" }
 
 [[bin]]
 name = "tree_view_test"

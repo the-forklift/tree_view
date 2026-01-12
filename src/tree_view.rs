@@ -87,7 +87,7 @@ impl Default for Node {
 
 impl<'a, T> TreeView<'a, T>
 where
-    T: Ord + ToTreeView,
+    T: ToTreeView,
 {
     pub fn new(t: &'a T) -> Self {
         TreeView {
@@ -103,7 +103,7 @@ where
 
 impl<T> Display for TreeView<'_, T>
 where
-    T: Ord + ToTreeView,
+    T: ToTreeView,
 {
     fn fmt(&self, f: &mut Formatter) -> Result {
         let output = self.root.clone().print_node("", true, false);
